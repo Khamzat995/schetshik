@@ -1,9 +1,9 @@
 function createTamagochi() {
   const tamagochiObject = {
     name: 'Tamagochi',
-    food: 1,
-    energy: 1,
-    mood: 1,
+    food: -1,
+    energy: 0,
+    mood: 0,
 
     getStatus: function () {
       if (this.food < 3) {
@@ -20,6 +20,10 @@ function createTamagochi() {
         console.log(`Мне скучно(${this.mood})`);
       } else {
         console.log(`Мне весело(${this.mood})`);
+      }
+
+      if (this.food <= 0) {
+        console.log(this.name + `${" умер :("}`)
       }
       return tamagochiObject;
     },
