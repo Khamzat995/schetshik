@@ -31,7 +31,7 @@ function createTamagochi() {
         console.log(this.name + ' умер :(')
       }
 
-      return tamagochiObject;
+      // return tamagochiObject;
     },
 
     setName: function (name) {
