@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ToDos</title>
+</head>
+<body>
+
+    <script>
+      function createTodoList() {
+        const todoListObject = {
+          items: [
+            {
+              text: "Завершить текущий челлендж",
+              completed: false
+            },
+            {
+              text: "Отдохнуть во время перерыва",
+              completed: false
+            },
+            {
+              text: "Помочь напарнику понять код",
+              completed: false
+            },
+            {
+              text: "Выиграть в мафию",
+              completed: true
+            },
+          ],
+
+          printAll: function () {
+            for (let i = 0; i < this.items.length; i++) {
+              console.log(this.items(i));
+            }
+          },
+
+        }
+
+        return todoListObject;
+      }
+
+      const todoList = createTodoList();
+
+    </script>
+</body>
+</html>

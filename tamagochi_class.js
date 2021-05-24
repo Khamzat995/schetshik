@@ -1,11 +1,18 @@
 function createTamagochi() {
-  const tamagochiObject = {
-    name: 'Tamagochi',
-    food: 1,
-    energy: 1,
-    mood: 0,
+  class tamagochiObject {
+    constructor(name, food, energy, mood) {
+      this.name = name;
+      this.food = food;
+      this.energy = energy;
+      this.mood = mood;
 
-    getStatus: function () {
+      let a = 'Tamagochi';
+      let b = 1;
+      let c = 1;
+      let d = 0;
+    }
+
+    getStatus () {
       if (this.food < 3) {
         console.log(`Я голоден(${this.food})`);
       } else {
@@ -31,36 +38,32 @@ function createTamagochi() {
         console.log(this.name + ' умер :(')
       }
 
-      // return tamagochiObject;
-    },
+    }
 
-    setName: function (name) {
+    setName (name) {
       this.name = name;
-    },
+    }
 
-    eat: function () {
+    eat () {
       if (this.food < 5 || this.mood < 5) {
         this.food++ && this.mood--;
       }
-    },
+    }
 
-    sleep: function () {
+    sleep () {
       if (this.energy < 5 || this.food < 5) {
         this.energy++ && this.food--;
       }
-    },
+    }
 
-    play: function () {
+    play () {
       if (this.mood < 5 || this.energy < 5) {
         this.mood++ && this.energy--;
       }
-    },
+    }
 
   }
   return tamagochiObject;
 }
 
 const tamagochi = createTamagochi();
-
-
-
